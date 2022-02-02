@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=OpenSans');
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: 'Roboto', sans-serif;
+	color: #222;
+	padding-bottom: 50px;
+}
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+/* Nav */
+
+.hero {
+	background-image: url(./propose.jpeg);
+	height: 100vh;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 45% 55%;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	/* because we want to overlay it */
+	position: relative;
+	margin-bottom: 20px;
+}
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+/* headings */
+.headings {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 2rem;
+	z-index: 99;
+}
+.main-heading {
+	text-align: center;
+	font-size: 6rem;
+	font-weight: bold;
+	/* padding: 5rem 5rem 1rem 5rem; */
+	color: rgb(169, 101, 113);
+	font-family: 'Dancing Script', sans-serif;
+}
+.heading-two {
+	font-size: 2rem;
+	/* margin-left: 39%; */
+	color: rgb(169, 101, 113);
+	background-color: white;
+	/* width: 30rem; */
+	text-align: center;
+	border-radius: 1rem;
+	padding: 1rem;
+	font-family: 'Dancing Script', sans-serif;
+}
+
+/* countdown */
+.coming-soon {
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+}
+.countdown {
+	display: flex;
+	justify-content: space-around;
+	text-align: center;
+	padding: 2rem;
+	color: white;
+	background-color: rgba(169, 101, 114, 0.557);
+	border-radius: 1rem;
+}
+.days,
+.hours,
+.minutes,
+.seconds {
+	font-size: 3rem;
+	padding: 0 3rem 3rem 3rem;
+}
