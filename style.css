@@ -14,6 +14,52 @@ body {
 	margin: 0 auto;
 }
 /* Nav */
+.nav {
+	position: fixed;
+	color: rgb(232, 138, 224);
+	top: 0;
+	left: 0;
+	right: 0;
+	transition: all 0.3s ease-in-out;
+}
+.nav .container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 0;
+	transition: all 0.3s ease-in-out;
+}
+.nav ul {
+	display: flex;
+	list-style-type: none;
+	align-items: center;
+	justify-content: center;
+}
+.nav a {
+	color: white;
+	text-decoration: none;
+	padding: 7px 15px;
+	transition: all 0.3s ease-in-out;
+}
+.nav.active {
+	background-color: rgb(231, 207, 229);
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+	color: rgb(232, 138, 224);
+}
+.nav.active a {
+	color: rgb(232, 138, 224);
+}
+.nav.active .container {
+	padding: 10px 0;
+}
+.nav a.current,
+.nav a:hover {
+	color: rgb(232, 138, 224);
+	font-weight: bold;
+}
+strong {
+	font-size: 2rem;
+}
 
 .hero {
 	background-image: url(./propose.jpeg);
@@ -29,6 +75,18 @@ body {
 	/* because we want to overlay it */
 	position: relative;
 	margin-bottom: 20px;
+	z-index: -2;
+}
+/* overlay for giving dark tone to background image*/
+.hero::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.1);
+	z-index: -1;
 }
 .container {
 	max-width: 1200px;
@@ -49,14 +107,16 @@ body {
 	font-size: 6rem;
 	font-weight: bold;
 	/* padding: 5rem 5rem 1rem 5rem; */
-	color: rgb(169, 101, 113);
+	/* color: rgba(169, 101, 114, 0.263); */
+	color: rgba(169, 101, 114, 0.986);
 	font-family: 'Dancing Script', sans-serif;
+	/* margin: -20px, 0 20px; */
 }
 .heading-two {
 	font-size: 2rem;
-	/* margin-left: 39%; */
+	letter-spacing: 1px;
 	color: rgb(169, 101, 113);
-	background-color: white;
+	background-color: rgba(255, 255, 255, 0.722);
 	/* width: 30rem; */
 	text-align: center;
 	border-radius: 1rem;
